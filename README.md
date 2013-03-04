@@ -12,7 +12,7 @@ Shmack is a lighweight, responsive solution that stacks elements into columns, a
 How to Use
 ----------
 
-Create markup with a container, and child elements
+Create markup with a container and child elements
 ```html
 <ul id="shmack-it">
 <li>
