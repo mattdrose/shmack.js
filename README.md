@@ -1,7 +1,7 @@
 Shmack.js
 ===========
 
-A jquery plugin to stack items into fluid columns, creating a grid layout similar to [Pinterest](http://www.pinterest.com).
+A jquery plugin to stack items into fluid columns, creating a grid layout similar to <a href="http://pinterest.com/all/" target="_blank">Pinterest</a>.
 
 ##Why Another Pinterest Clone?
 
@@ -52,7 +52,7 @@ $(document).ready(function(){
 });
 ````
 
-[Here's an example on CodePen](http://codepen.io/mattdrose/pen/LDfFp)
+<a href="http://codepen.io/mattdrose/pen/LDfFp" target="_blank">Here's an example on CodePen</a>
 
 
 Options
@@ -73,6 +73,6 @@ complete: false			//Function - Run on complete
 Similar Plugins
 ---------------
 
-*	[Masonry](https://github.com/desandro/masonry)
-*	[BlocksIt.js](http://www.inwebson.com/jquery/blocksit-js-dynamic-grid-layout-jquery-plugin/)
-*	[Wookmark](https://github.com/GBKS/Wookmark-jQuery)
+*	<a href="https://github.com/desandro/masonry" target="_blank">Masonry</a>
+*	<a href="http://www.inwebson.com/jquery/blocksit-js-dynamic-grid-layout-jquery-plugin/" target="_blank">BlocksIt.js</a>
+*	<a href="https://github.com/GBKS/Wookmark-jQuery" target="_blank">Wookmark</a>
