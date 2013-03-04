@@ -5,7 +5,7 @@ A jquery plugin to stack items into fluid columns, creating a grid layout simila
 
 ##Why Another Pinterest Clone?
 
-There are already several plugins that do what shmack does. The only problem is that they use fixed calculated positioning, which results in bloat, possible rendering/paint issues, and isn't good responsive layouts.
+There are already several plugins that do what shmack does. The only problem is that they use fixed calculated positioning, which results in bloat, possible rendering/paint issues, and isn't good for responsive layouts.
 
 Shmack is a lighweight, responsive solution that stacks elements into columns, as apposed to using fixed calculations to position them.
 
@@ -13,7 +13,7 @@ Shmack is a lighweight, responsive solution that stacks elements into columns, a
 How to Use
 ----------
 
-Create markup with a container and child elements:
+Create markup that includes a container with children:
 ```html
 <ul id="shmack-it">
 <li>
@@ -61,12 +61,14 @@ Options
 These are the options (and their defaults) that you can pass to shmack:
 
 ```javascript
-blockSelector: 'li',	//String - Selector for elements to be sorted into columns
-columns: 3,				//Integer - Number of columns to stack
-loadImages: true,		//Boolean - Load images before stacking (important for calculating heights)
-setImageHeight: false,	//Boolean - Height of images is set using data-height (used for faster *	load time)
-onBlockLoad: false,		//Function - Run after each block loads
-complete: false			//Function - Run on complete
+$('#shmack-it').shmack({
+	blockSelector: 'li',	//String - Selector for elements to be sorted into columns
+	columns: 3,				//Integer - Number of columns to stack
+	loadImages: true,		//Boolean - Load images before stacking (important for calculating heights)
+	setImageHeight: false,	//Boolean - Height of images is set using data-height (used for faster load times)
+	onBlockLoad: false,		//Function - Callback after each block loads
+	complete: false			//Function - Callback on complete
+});
 ````
 
 
