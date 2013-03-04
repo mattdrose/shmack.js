@@ -9,6 +9,7 @@ There are already several plugins that do what shmack does. The only problem is 
 
 Shmack is a lighweight, responsive solution that stacks elements into columns, as apposed to using fixed calculations to position them.
 
+
 How to Use
 ----------
 
@@ -51,6 +52,9 @@ $(document).ready(function(){
 });
 ````
 
+[Here's an example on CodePen](http://codepen.io/mattdrose/pen/LDfFp)
+
+
 Options
 -------
 
@@ -64,6 +68,7 @@ setImageHeight: false,	//Boolean - Height of images is set using data-height (us
 onBlockLoad: false,		//Function - Run after each block loads
 complete: false			//Function - Run on complete
 ````
+
 
 Similar Plugins
 ---------------
