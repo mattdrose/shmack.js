@@ -1,18 +1,18 @@
 Shmack.js
 ===========
 
-A jquery plugin to stack items into fluid columns, creating a grid layout simialar to [Pinterest](http://www.pinterest.com).
+A jquery plugin to stack items into fluid columns, creating a grid layout similar to [Pinterest](http://www.pinterest.com).
 
 ##Why Another Pinterest Clone?
 
-There are already several plugins that does what shmack does. The only problem is that they use fixed calculated positioning, which is poor for bloat, performance, and responsive layouts.
+There are already several plugins that do what shmack does. The only problem is that they use fixed calculated positioning, which results in bloat, possible rendering/paint issues, and isn't good responsive layouts.
 
-Shmack is a lighweight, responsive solution that stacks elements into columns, as appose to using fixed calculations to position them.
+Shmack is a lighweight, responsive solution that stacks elements into columns, as apposed to using fixed calculations to position them.
 
 How to Use
 ----------
 
-Create markup with a container and child elements
+Create markup with a container and child elements:
 ```html
 <ul id="shmack-it">
 <li>
@@ -38,13 +38,13 @@ Create markup with a container and child elements
 </ul>
 ```
 
-Include jQuery and shmack.js at the bottom of your page.
+Include jQuery and shmack.js at the bottom of your page:
 ```html
 <script type="text/javascript" src="path/to/jquery.js"></script>
 <script type="text/javascript" src="path/to/jquery.shmack.min.js"></script>
 ```
 
-Initialize the plugin on load.
+Initialize the plugin on load:
 ```javascript
 $(document).ready(function(){
   $('#shmack-it').shmack();
