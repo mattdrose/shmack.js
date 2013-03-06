@@ -12,7 +12,7 @@
 
         // plugin's default options
         var defaults = {
-            blockSelector: 'li',	//String - Selector for elements to be sorted into columns
+            blockSelector: '.block',//String - Selector for elements to be sorted into columns
 			columns: 3,				//Integer - Number of columns to stack
 			loadImages: true,		//Boolean - Load images before stacking (important for calculating heights)
 			setImageHeight: false,	//Boolean - Height of images is set using data-height (used for faster load time)
@@ -28,14 +28,16 @@
         // element.data('shmack').settings.propertyName from outside the plugin
         base.settings = $.extend({}, defaults, options);
 
-        var $element = $(element), // reference to the jQuery version of DOM element
-             //element = element;  // reference to the actual DOM element
+        var $element = $(element),	// reference to the jQuery version of DOM element
 
 			//Store all the blocks
 			$blocks = $element.find(base.settings.blockSelector);
 
         // the "constructor" method that gets called when the object is created
         var init = function() {
+
+			//Clearfix the container... hopefully the class is in the css :P
+			$element.addClass('clearfix');
 
 			//Create the columns
 				//Calculate fluid width of columns
@@ -49,12 +51,13 @@
 			//Add column containers
 			for(var i=1; i<=base.settings.columns; i++){
 				//Make a column container jQuery Object
-				var $columnContainer =	$('<div></div>').addClass('shmack-column')
-												.attr('id', 'shmack-column-'+i)
-												.css({
-													width: base.columnWidth,
-													float: 'left'
-												});
+				var $columnContainer =	$('<div></div>')
+											.attr('id', 'shmack-column-'+i)
+											.addClass('shmack-column')
+											.css({
+												width: base.columnWidth,
+												float: 'left'
+											});
 
 				//Append the column container
 				$element.append($columnContainer);
@@ -92,20 +95,14 @@
 
 
 				//Run onBlockLoad function after each block has loaded
-				if(base.settings.onBlockLoad){
-					base.settings.onBlockLoad(i, block);
+				if (base.settings.onBlockLoad && typeof(base.settings.onBlockLoad) === "function") {
+					base.settings.onBlockLoad.call(block, i);
 				}
 
-			})
-
-			//Reset blocks css to work with columns - responsive :)
-			.css({
-				width: '100%',
-				float: 'none'
 			});
 
-			if(base.settings.complete){
-				base.settings.complete();
+			if (base.settings.complete && typeof(base.settings.complete) === "function") {
+				base.settings.complete.call(element);
 			}
 
         };
